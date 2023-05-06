@@ -49,64 +49,40 @@ Table 1. Primary Key Constraints
 
 Table 2. Foreign Key Constraints
 
-+-----------------+-----------------+-----------------+-----------------+
-| **FK_Table**  | **FK_Column**   | [**PK_Table**   | **PK_Column**   |
-|                 |                 | Employe         |                 |
-|                 |                 | es]{.underline} |                 |
-+=================+=================+=================+=================+
-| Employees     | ReportsTo     |                 | EmployeeID      |
-+-----------------+-----------------+-----------------+-----------------+
-| Order Details | OrderID       | Orders        | OrderID       |
-+-----------------+-----------------+-----------------+-----------------+
-| Order Details | ProductID     | Products      | ProductID     |
-+-----------------+-----------------+-----------------+-----------------+
-| Orders        | CustomerID      | Customers       | CustomerID      |
-+-----------------+-----------------+-----------------+-----------------+
-| Orders        | EmployeeID      | [Employees    | EmployeeID      |
-|                 |                 | Shippe        |                 |
-|                 |                 | rs]{.underline} |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| Orders        | ShipVia       |                 | ShipperID     |
-+-----------------+-----------------+-----------------+-----------------+
-| Orders        | TerritoryID   | Territories     | TerritoryID   |
-+-----------------+-----------------+-----------------+-----------------+
-| Products      | CategoryID    | Categories      | CategoryID    |
-+-----------------+-----------------+-----------------+-----------------+
-| Products      | SupplierID    | Suppliers     | SupplierID    |
-+-----------------+-----------------+-----------------+-----------------+
-| Territories   | RegionID      | Region        | RegionID      |
-+-----------------+-----------------+-----------------+-----------------+
+SEE THE DOCUMENT
+
+
 
 > **PART 2. DIMENSIONAL DATABASE (DATA WAREHOUSE) CREATION & POPULATION
 > (60)**
 >
-> **1.**Add a new DDL query in the **database_creation.sql** file to
+> **1.** Add a new DDL query in the **database_creation.sql** file to
 > create an empty database named **Orders_DIMENSIONAL_DW** and run it
 > (within SQL Server).
 >
-> **2.**Store the database connection configurations in the
+> **2.** Store the database connection configurations in the
 > **sql_server_config.cfg** file (feel free to name it differently).
 >
-> **3.**Create parametrized SQL scripts named
+> **3.** Create parametrized SQL scripts named
 > **create_table_dim\_{}.sql** for creating empty dimension and fact
 > tables for each table in the relational db. The dimension tables types
 > for each group are allocated in **Table 1** (see at the end of this
 > description file).Make sure to have all necessary surrogate (SK)
 > columns (both PK and FK).
 >
-> **4.**Establish the primary and foreign key constraints respectively.
+> **4.** Establish the primary and foreign key constraints respectively.
 >
-> **5.**Create a SQL script to create a date dimension table that is
+> **5.** Create a SQL script to create a date dimension table that is
 > consistent with the date format provided by the relational table.
 >
-> **6.**Create parametrized SQL scripts named **update_dim\_{}.sql** to
+> **6.** Create parametrized SQL scripts named **update_dim\_{}.sql** to
 > ingest data into the empty dim tables from respective tables in the
 > relational db.
 >
-> **7.**Create a parametrized SQL script named **updated_fact\_{}.sql**
+> **7.** Create a parametrized SQL script named **updated_fact\_{}.sql**
 > to ingest data into the empty fact tables.
 >
-> **8.**Make all the necessary changes to the Python utilities
+> **8.** Make all the necessary changes to the Python utilities
 > (utils.py), tasks (tasks.py) and flow ({}\_flow.py) files in order to
 > add more steps to the unified process for
 >
@@ -132,8 +108,8 @@ Table 2. Foreign Key Constraints
 >
 > 3.Your solution should contain
 >
-> 1.**at least 3-4 topic-consistent visualizations** on each page,
-> 2.**at least 2 slicers** on each page.
+> 1. **at least 3-4 topic-consistent visualizations** on each page,
+> 2. **at least 2 slicers** on each page.
 >
 > 4.Your solution should have **at least 5 distinct DAX measures**:\
 > 1.at least 8 Date Intelligence measures\
