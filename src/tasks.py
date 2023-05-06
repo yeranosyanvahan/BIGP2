@@ -5,7 +5,6 @@ import pyodbc
 import utils
 
 
-
 def connect_db_create_cursor(database_conf_name):
     # Call to read the configuration file
     db_conf = utils.get_sql_config(config.sql_server_config, database_conf_name)
