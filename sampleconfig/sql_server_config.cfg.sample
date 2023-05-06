@@ -1,0 +1,5 @@
+[Database1]
+Driver={ODBC Driver 17 for SQL Server}
+Server=AASRYAN-NB
+Database=Orders_ER
+Trusted_Connection=yes
