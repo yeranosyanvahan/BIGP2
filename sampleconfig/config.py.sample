@@ -1,6 +1,14 @@
 # Configuration for the pipeline
-# config.py is in src
+# put config.py is in src
 
-input_dir = 'C:\\Users\\path\\to\\BIGP2\\queries'
+abspath = "C:\\path\\to\\repo"
 
-sql_server_config = 'C:\\Users\\path\\to\\BIGP2\\sql_server_config.cfg'
+sql_server_config = '{abspath}\\BIGP2\\sql_server_config.cfg'
+
+input_dir = '{abspath}\\BIGP2\\queries'
+
+relational_input_dir = '{abspath}\\BIGP2\\queries\\relational'
+relational_table_list = ["Categories", "Suppliers", "Customers", "Employees", "Products", "Region", "Shippers", "Territories", "Orders", "Order_Details"]
+
+dimentional_input_dir = '{abspath}\\BIGP2\\queries\\dimentional'
+dimentional_table_list = ["DimCategories", "DimSuppliers", "DimCustomers", "DimEmployees", "DimProducts", "DimRegion", "DimShippers", "DimTerritories", "FactOrders"]
