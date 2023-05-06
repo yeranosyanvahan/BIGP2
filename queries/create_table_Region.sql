@@ -6,5 +6,5 @@ GO
 
 CREATE TABLE [dbo].[Region](
 	RegionID int PRIMARY KEY,
-	RegionDescription nchar(50) NOT NULL 
+	RegionDescription varchar(20) NOT NULL 
 );

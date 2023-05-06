@@ -5,8 +5,8 @@ DROP TABLE IF EXISTS [dbo].[Territories]
 GO
 
 CREATE TABLE [dbo].[Territories](
-	TerritoryID nvarchar(20) PRIMARY KEY,
-	TerritoryDescription nchar(50) NOT NULL,
+	TerritoryID int PRIMARY KEY,
+	TerritoryDescription varchar(30) NOT NULL,
 	RegionID int  NOT NULL,
 	FOREIGN KEY(RegionID) references Region(RegionID)
 );

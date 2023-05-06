@@ -6,6 +6,6 @@ GO
 
 CREATE TABLE [dbo].[Shippers](
 	ShipperID int PRIMARY KEY,
-	CompanyName nvarchar(40) NOT NULL,
-	Phone nvarchar(24) NULL,
+	CompanyName varchar(40) NOT NULL,
+	Phone varchar(24) NULL,
 );

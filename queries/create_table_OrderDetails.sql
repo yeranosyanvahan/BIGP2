@@ -9,7 +9,7 @@ CREATE TABLE [dbo].[OrderDetails](
 	ProductID int NOT NULL,
 	UnitPrice money NOT NULL,
 	Quantity smallint NOT NULL,
-	Discoumt real NOT NULL,
+	Discount real NOT NULL,
 	FOREIGN KEY(OrderID) references Orders(OrderID),
 	FOREIGN KEY(ProductID) references Products(ProductID),
 	PRIMARY KEY(OrderID,ProductID)
