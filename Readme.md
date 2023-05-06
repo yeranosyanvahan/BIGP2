@@ -1,5 +1,10 @@
-DS 206: GROUP PROJECT #2 <br/>
-PART 1. RELATIONAL DATABASE CREATION (40)
+## GET STARTED
+To get started modify the config files in sampleconfig folder to your specific configuration parameters and put(and rename them) <br/>
+```config.py.sample``` to ```/src/config.py``` path relative to the repository<br/>
+```sql_server_config.cfg.sample``` to ```/sql_server_config.cfg``` path relative to the repository
+
+### DS 206: GROUP PROJECT #2
+#### PART 1. RELATIONAL DATABASE CREATION (40)
 1. Create an empty script file named database_creation.sql. Add a DDL query to 
 create an empty database named Orders_RELATIONAL_DB and run it (within
 SQL Server). 
