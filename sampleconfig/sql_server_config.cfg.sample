@@ -1,4 +1,3 @@
-# put this in main
 [Orders_RELATIONAL_DB]
 Driver={ODBC Driver 17 for SQL Server}
 Server=YOURNAME
