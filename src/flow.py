@@ -17,7 +17,7 @@ class FLOW:
         pass
 
     def drop_tables_rel(self, conn):
-        for tablename in self.config.relational_table_list:
+        for tablename in self.config.relational_table_list[::-1]:
             tasks.drop_table(conn, tablename,'Orders_RELATIONAL_DB', 'dbo')           
 
     def create_tables_rel(self, conn):
@@ -34,7 +34,13 @@ class FLOW:
         self.create_tables_rel(conn_Rel)
 #        self.insert_into_table(conn_Rel)
         conn_Rel.close()
-#        conn_Dim = FLOW.create_connection("Orders_DIMENSIONAL_DW")
+
+#         conn_Dim = FLOW.create_connection("DIMENTIONAL") 
+#         self.drop_tables_dim(conn_Rel)
+#         self.create_tables_dim(conn_Rel)
+#         self.update_into_dim(conn_Rel)
+#         self.insert_into_fact(conn_Rel)
+#         conn_Dim.close()        
 
 # if __name__ == '__main__':
 #     conn_Rel = tasks.connect_db_create_cursor("Orders_RELATIONAL_DB") 

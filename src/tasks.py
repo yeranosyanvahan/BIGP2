@@ -35,7 +35,7 @@ def drop_table(cursor, table_name, db, schema):
                                                                                        table_name=table_name))
 
 def create_table(cursor, table_name, db, schema):
-    create_table_script = load_query('create_table_{}'.format(table_name)).format(db=db, schema=schema)
+    create_table_script = load_query('create_table_{}'.format(table_name)).format(db=db, schema=schema, table=table_name)
     cursor.execute(create_table_script)
     cursor.commit()
     print("The {schema}.{table_name} table from the database {db} has been created".format(db=db, schema=schema,

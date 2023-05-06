@@ -1,10 +1,4 @@
-USE Orders_RELATIONAL_DB;
-GO
-
-DROP TABLE IF EXISTS [dbo].[Employees]
-GO
-
-CREATE TABLE [dbo].[Employees](
+CREATE TABLE {db}.{schema}.{table}(
 	EmployeeID int PRIMARY KEY,
 	LastName nvarchar(20) NOT NULL,
 	FirstName nvarchar(10)  NOT NULL,
