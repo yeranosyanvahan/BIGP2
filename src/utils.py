@@ -1,5 +1,8 @@
 import configparser
 
+# spread rows to list:
+def spread(row):
+    return (row[key] for key in row)
 # Util to read the configuration file
 def get_sql_config(filename, database):
      cf = configparser.ConfigParser ()

@@ -32,7 +32,7 @@ class FLOW:
         conn_Rel = FLOW.create_connection("RELATIONAL") 
         self.drop_tables_rel(conn_Rel)
         self.create_tables_rel(conn_Rel)
-#        self.insert_into_table(conn_Rel)
+        self.insert_into_table(conn_Rel)
         conn_Rel.close()
 
 #         conn_Dim = FLOW.create_connection("DIMENTIONAL") 

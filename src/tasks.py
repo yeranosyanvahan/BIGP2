@@ -48,7 +48,7 @@ def insert_into_table(cursor, table_name, db, schema, source_data):
 
     # Populate a table in sql server
     for index, row in df.iterrows():
-        cursor.execute(insert_into_table_script, row['BusinessEntityID'], row['FirstName'], row['LastName'])
+        cursor.execute(insert_into_table_script, *utils.spread(row))
         cursor.commit()
 
     print(f"{len(df)} rows have been inserted into the {db}.{schema}.{table_name} table")
@@ -65,5 +65,8 @@ def update_dim_table(cursor, table_dst, db_dst, schema_dst, table_src, db_src, s
 
     print(f"The dimension table {table_dst} has been updated.")
 
+def create_database(cursor, table_name, db, schema):
+    create_table_script = load_query('database_creation')
+    
 def update_fact_table(cursor, table_dst, db_dst, schema_dst, table_src, db_src, schema_src):
     pass
