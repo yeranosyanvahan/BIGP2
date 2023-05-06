@@ -1,4 +1,5 @@
 # Configuration for the pipeline
+# config.py is in src
 
 input_dir = 'C:\\Users\\path\\to\\BIGP2\\queries'
 
