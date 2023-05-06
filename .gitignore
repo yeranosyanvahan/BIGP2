@@ -81,7 +81,8 @@ target/
 # IPython
 profile_default/
 ipython_config.py
-
+config.py
+sql_server_config.cfg
 # pyenv
 .python-version
 
