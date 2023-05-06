@@ -43,7 +43,7 @@ def create_table(cursor, table_name, db, schema):
 
 def insert_into_table(cursor, table_name, db, schema, source_data):
     # Read the excel table
-    df = pd.read_csv(source_data, header=0)
+    df = pd.read_excel(source_data, sheet_name = table_name)
 
     insert_into_table_script = load_query('insert_into_{}'.format(table_name)).format(db=db, schema=schema)
 
