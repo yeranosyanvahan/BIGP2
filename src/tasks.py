@@ -26,6 +26,7 @@ def load_query(query_name):
             break
     return sql_script
 
+
 def drop_table(cursor, table_name, db, schema):
     drop_table_script = load_query('drop_table').format(db=db, schema=schema, table=table_name)
     cursor.execute(drop_table_script)
