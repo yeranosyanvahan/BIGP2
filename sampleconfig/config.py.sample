@@ -1,5 +1,5 @@
 # Configuration for the pipeline
 
-input_dir = 'C:\\Users\\aasryan\\Downloads\\DS206 Spring2023\\Week12\\python_sql\\queries'
+input_dir = 'C:\\Users\\path\\to\\BIGP2\\queries'
 
-sql_server_config = 'C:\\Users\\aasryan\\Downloads\\DS206 Spring2023\\Week12\\python_sql\\sql_server_config.cfg'
+sql_server_config = 'C:\\Users\\path\\to\\BIGP2\\sql_server_config.cfg'

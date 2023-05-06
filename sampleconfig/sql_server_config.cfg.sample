@@ -1,5 +1,5 @@
 [Database1]
 Driver={ODBC Driver 17 for SQL Server}
-Server=AASRYAN-NB
-Database=Orders_ER
+Server=YOURNAME
+Database=Orders_RELATIONAL_DB
 Trusted_Connection=yes
