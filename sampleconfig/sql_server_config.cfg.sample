@@ -3,3 +3,10 @@ Driver={ODBC Driver 17 for SQL Server}
 Server=YOURNAME
 Database=Orders_RELATIONAL_DB
 Trusted_Connection=yes
+
+
+[Orders_DIMENSIONAL_DW]
+Driver={ODBC Driver 17 for SQL Server}
+Server=YOURNAME
+Database=Orders_DIMENSIONAL_DW
+Trusted_Connection=yes
