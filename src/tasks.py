@@ -26,6 +26,7 @@ def load_query(query_name):
             break
     return sql_script
 
+
 def drop_table(cursor, table_name, db, schema):
     drop_table_script = load_query('drop_table').format(db=db, schema=schema, table=table_name)
     cursor.execute(drop_table_script)
@@ -42,7 +43,7 @@ def create_table(cursor, table_name, db, schema):
 
 def insert_into_table(cursor, table_name, db, schema, source_data):
     # Read the excel table
-    df = pd.read_csv(source_data, header=0)
+    df = pd.read_excel(source_data, sheet_name = table_name)
 
     insert_into_table_script = load_query('insert_into_{}'.format(table_name)).format(db=db, schema=schema)
 
@@ -64,3 +65,6 @@ def update_dim_table(cursor, table_dst, db_dst, schema_dst, table_src, db_src, s
     cursor.commit()
 
     print(f"The dimension table {table_dst} has been updated.")
+
+def update_fact_table(cursor, table_dst, db_dst, schema_dst, table_src, db_src, schema_src):
+    pass
