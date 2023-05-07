@@ -13,7 +13,7 @@ CREATE TABLE {db}.{schema}.{table}(
 	Country nvarchar(15) NULL,
 	HomePhone nvarchar(24) NULL,
 	Extension nvarchar(4) NULL,
-	Photo image NULL,
+--	Photo image NULL,
 	Notes varchar(MAX) NULL,
 	ReportsTo int NULL,
 	PhotoPath nvarchar(255) NULL,

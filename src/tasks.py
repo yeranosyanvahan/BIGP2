@@ -64,9 +64,6 @@ def update_dim_table(cursor, table_dst, db_dst, schema_dst, table_src, db_src, s
     cursor.commit()
 
     print(f"The dimension table {table_dst} has been updated.")
-
-def create_database(cursor, table_name, db, schema):
-    create_table_script = load_query('database_creation')
     
 def update_fact_table(cursor, table_dst, db_dst, schema_dst, table_src, db_src, schema_src):
     pass
