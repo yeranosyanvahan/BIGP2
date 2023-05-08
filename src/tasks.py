@@ -53,7 +53,8 @@ def insert_into_table(cursor, table_name, db, schema, source_data):
 
     print(f"{len(df)} rows have been inserted into the {db}.{schema}.{table_name} table")
 
-def update_dim_table(cursor, table_dst, db_dst, schema_dst, table_src, db_src, schema_src):
+
+def update_dim_table(cursor, db_src, schema_src, table_src, db_dst, schema_dst, table_dst):
 
     update_table_script = load_query('update_table_{}'.format(table_dst)).format(
         db_dim=db_dst, schema_dim=schema_dst, table_dim=table_dst,
