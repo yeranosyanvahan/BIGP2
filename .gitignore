@@ -8,6 +8,9 @@ sql_server_config.cfg
 # macOs
 .DS_Store
 
+# idea
+.idea
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

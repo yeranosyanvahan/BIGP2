@@ -1,9 +1,16 @@
 import configparser
 
+# spread rows to list:
+def spread(row):
+    Stringify = [str(r) for r in list(row)]
+    print(Stringify)
+    return Stringify
+
 # Util to read the configuration file
 def get_sql_config(filename, database):
      cf = configparser.ConfigParser ()
      cf.read (filename) #Read configuration file
+     print(filename)
      # Read corresponding file parameters
      _driver = cf.get(database,"DRIVER")
      _server = cf.get(database,"Server")
