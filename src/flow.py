@@ -18,7 +18,7 @@ class FLOW:
             tasks.drop_table(conn, tablename,'Orders_RELATIONAL_DB', 'dbo')     
 
     def drop_tables_dim(self, conn):
-        for tablename in self.config.relational_table_list[::-1]:
+        for tablename in self.config.dimentional_table_list[::-1]:
             tasks.drop_table(conn, tablename,'Orders_DIMENSIONAL_DW', 'dbo')          
 
     def create_tables_rel(self, conn):
@@ -31,7 +31,7 @@ class FLOW:
 
     def create_tables_dim(self, conn):
         for tablename in self.config.dimentional_table_list:
-            tasks.create_table(conn, tablename, 'Orders_DIMENSIONAL_DW', 'dbo')  
+            tasks.create_table_dim(conn, tablename, 'Orders_DIMENSIONAL_DW', 'dbo')  
 
     def update_dim_table(self, conn):
         for reltablename, dimtablename in zip(self.config.relational_table_list_tmp, self.config.dimentional_table_list):
