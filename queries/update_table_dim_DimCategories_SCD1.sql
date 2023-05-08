@@ -5,7 +5,7 @@ WHEN NOT MATCHED THEN -- there are IDs in the source table that are not in the d
   INSERT (CategoryID_NK, CategoryName, Description)
   VALUES (SRC.CategoryID, SRC.CategoryName, SRC.Description)
 WHEN MATCHED AND (
-  ISNULL(DST.CategoryName, '') <> Isnull(SRC.CategoryName, '')
+  ISNULL(DST.CategoryName, '') <> Isnull(SRC.CategoryName, ''))
   THEN
     UPDATE SET
         DST.CategoryName = SRC.CategoryName;
