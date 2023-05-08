@@ -34,7 +34,7 @@ class FLOW:
             tasks.create_table(conn, tablename, 'Orders_DIMENSIONAL_DW', 'dbo')  
 
     def update_dim_table(self, conn):
-        for reltablename, dimtablename in zip(self.config.relational_table_list, self.config.dimentional_table_list):
+        for reltablename, dimtablename in zip(self.config.relational_table_list_tmp, self.config.dimentional_table_list):
             tasks.update_dim_table(conn, 'Orders_RELATIONAL_DB', 'dbo', reltablename,
                                          'Orders_DIMENSIONAL_DW', 'dbo', dimtablename)    
 
