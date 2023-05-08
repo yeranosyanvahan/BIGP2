@@ -1,10 +1,4 @@
-USE Orders_RELATIONAL_DB;
-GO
-
-DROP TABLE IF EXISTS [dbo].[Products]
-GO
-
-CREATE TABLE [dbo].[Products](
+CREATE TABLE {db}.{schema}.Products(
 	ProductID int PRIMARY KEY,
 	ProductName varchar(40) NOT NULL,
 	SupplierID int NULL,

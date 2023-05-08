@@ -1,10 +1,4 @@
-USE Orders_RELATIONAL_DB;
-GO
-
-DROP TABLE IF EXISTS [dbo].[Customers]
-GO
-
-CREATE TABLE [dbo].[Customers](
+CREATE TABLE {db}.{schema}.Customers(
 	CustomerID char(5) PRIMARY KEY,
 	CompanyName varchar(40) NOT NULL,
 	ContactName varchar(30) NULL,

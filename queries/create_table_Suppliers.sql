@@ -1,10 +1,4 @@
-USE Orders_RELATIONAL_DB;
-GO
-
-DROP TABLE IF EXISTS [dbo].[Suppliers]
-GO
-
-CREATE TABLE [dbo].[Suppliers](
+CREATE TABLE {db}.{schema}.Suppliers(
 	SupplierID int PRIMARY KEY,
 	CompanyName varchar(100) NOT NULL,
 	ContactName varchar(40) NULL,

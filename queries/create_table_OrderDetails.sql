@@ -1,10 +1,4 @@
-USE Orders_RELATIONAL_DB;
-GO
-
-DROP TABLE IF EXISTS [dbo].[OrderDetails]
-GO
-
-CREATE TABLE [dbo].[OrderDetails](
+CREATE TABLE {db}.{schema}.OrderDetails(
 	OrderID int NOT NULL,
 	ProductID int NOT NULL,
 	UnitPrice money NOT NULL,
