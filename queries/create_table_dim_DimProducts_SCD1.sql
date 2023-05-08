@@ -1,15 +1,15 @@
-CREATE TABLE {db}.{schema}.Products(
+CREATE TABLE {db}.{schema}.DimProducts_SCD2(
 	ProductID_PK_SK int PRIMARY KEY IDENTITY(1,1),
 	ProductID_NK int,
 	ProductName varchar(40) NOT NULL,
-	SupplierID int NULL,
-	CategoryID int NULL,
+	SupplierID_FK_SK int NULL,
+	CategoryID_FK_SK int NULL,
 	QuantityPerUnit varchar(20) NULL,
 	UnitPrice real NULL,
 	UnitsInStock smallint NULL,
 	UnitsOnOrder smallint NULL,
 	ReorderLevel smallint NULL,
 	Discontinued bit NOT NULL,
-	FOREIGN KEY(CategoryID) references Categories(CategoryID),
-	FOREIGN KEY(SupplierID) references Suppliers(SupplierID)
+	FOREIGN KEY(CategoryID) references DimCategories_SCD1(CategoryID_PK_SK),
+	FOREIGN KEY(SupplierID) references DimSuppliers_SCD3(SupplierID_PK_SK)
 );
