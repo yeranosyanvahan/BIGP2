@@ -1,4 +1,4 @@
-CREATE TABLE {db}.{schema}.Employees(
+CREATE TABLE {db}.{schema}.DimEmployees_SCD1(
 	EmployeeID_PK_SK int PRIMARY KEY IDENTITY(1,1),
 	EmployeeID_NK int,
 	LastName varchar(20) NOT NULL,
@@ -17,5 +17,5 @@ CREATE TABLE {db}.{schema}.Employees(
 	Notes varchar(500) NULL,
 	ReportsTo int NULL,
 	PhotoPath varchar(255) NULL,
-	FOREIGN KEY(ReportsTo) references Employees(EmployeeID)
+	FOREIGN KEY(ReportsTo) references DimEmployees_SCD1(EmployeeID)
 );
