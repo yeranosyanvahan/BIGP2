@@ -46,8 +46,8 @@ class FLOW:
         conn_Rel.close()
 
         conn_Dim = FLOW.create_connection("DIMENTIONAL") 
-        self.drop_tables_dim(conn_Rel)
-        self.create_tables_dim(conn_Rel)
-        self.update_dim_table(conn_Rel)
-#        self.insert_into_fact(conn_Rel)
+        self.drop_tables_dim(conn_Dim)
+        self.create_tables_dim(conn_Dim)
+        self.update_dim_table(conn_Dim)
+#        self.insert_into_fact(conn_Dim)
         conn_Dim.close()        
