@@ -6,7 +6,7 @@ CREATE TABLE {db}.{schema}.Products(
 	QuantityPerUnit varchar(20) NULL,
 	UnitPrice real NULL,
 	UnitsInStock smallint NULL,
-	UnitOnOrder smallint NULL,
+	UnitsOnOrder smallint NULL,
 	ReorderLevel smallint NULL,
 	Discontinued bit NOT NULL,
 	FOREIGN KEY(CategoryID) references Categories(CategoryID),

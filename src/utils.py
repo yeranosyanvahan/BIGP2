@@ -2,14 +2,18 @@ import configparser
 
 # spread rows to list:
 def spread(row):
-    Stringify = [str(r) for r in list(row)]
-    print(Stringify)
-    return Stringify
+    def stringifier(r):
+        if(str(r) in ['nan', "NaT"] ):
+            return None
+        if(len(str(r)) > 2 and str(r)[-2:] == '.0'):
+            return str(r)[:-2] 
+        return str(r)
+    return [stringifier(r) if str(r) != '2.0' else 2 for r in list(row)]
 
 # Util to read the configuration file
 def get_sql_config(filename, database):
      cf = configparser.ConfigParser ()
-     cf.read (filename) #Read configuration file
+     cf.read(filename) #Read configuration file
      print(filename)
      # Read corresponding file parameters
      _driver = cf.get(database,"DRIVER")

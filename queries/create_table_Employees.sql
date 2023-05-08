@@ -6,7 +6,7 @@ CREATE TABLE {db}.{schema}.Employees(
 	TitleOfCourtesy varchar(25) NULL, 
 	BirthDate datetime NULL,
 	HireDate datetime NULL,
-	'Address' varchar(60) NULL,
+	Address varchar(60) NULL,
 	City varchar(15) NULL,
 	Region varchar(15) NULL,
 	PostalCode varchar(10) NULL,

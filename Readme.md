@@ -3,6 +3,7 @@ To get started modify the config files in sampleconfig folder to your specific c
 ```config.py.sample``` to ```/src/config.py``` path relative to the repository<br/>
 ```sql_server_config.cfg.sample``` to ```/sql_server_config.cfg``` path relative to the repository
 
+In order run the script go to the root of the repo and run ```python src/exec.py```
 
 We are working with 10 tables
   Categories           
