@@ -1,12 +1,13 @@
-CREATE TABLE {db}.{schema}.{table}(
+CREATE TABLE {db}.{schema}.Products(
 	ProductID int PRIMARY KEY,
-	ProductName nvarchar(40) NOT NULL,
+	ProductName varchar(40) NOT NULL,
 	SupplierID int NULL,
 	CategoryID int NULL,
-	QuantityPer nvarchar(20) NULL,
+	QuantityPerUnit varchar(20) NULL,
+	UnitPrice real NULL,
 	UnitsInStock smallint NULL,
 	UnitOnOrder smallint NULL,
-	RecorderLevel smallint NULL,
+	ReorderLevel smallint NULL,
 	Discontinued bit NOT NULL,
 	FOREIGN KEY(CategoryID) references Categories(CategoryID),
 	FOREIGN KEY(SupplierID) references Suppliers(SupplierID)

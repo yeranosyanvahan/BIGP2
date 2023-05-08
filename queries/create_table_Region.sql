@@ -1,4 +1,4 @@
-CREATE TABLE {db}.{schema}.{table}(
+CREATE TABLE {db}.{schema}.Region(
 	RegionID int PRIMARY KEY,
-	RegionDescription nchar(50) NOT NULL 
+	RegionDescription varchar(20) NOT NULL 
 );

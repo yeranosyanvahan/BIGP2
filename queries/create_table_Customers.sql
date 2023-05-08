@@ -1,5 +1,5 @@
-CREATE TABLE {db}.{schema}.{table}(
-	CustomerID nchar(5) PRIMARY KEY,
+CREATE TABLE {db}.{schema}.Customers(
+	CustomerID char(5) PRIMARY KEY,
 	CompanyName varchar(40) NOT NULL,
 	ContactName varchar(30) NULL,
 	ContactTitle varchar(30) NULL,
