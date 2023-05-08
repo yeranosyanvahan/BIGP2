@@ -1,6 +1,7 @@
 **DS 206: GROUP PROJECT #2**
 
 
+
 > **PART 1. RELATIONAL DATABASE CREATION (40)**
 >
 > **1.** Create an empty script file named **database_creation.sql.** Add
