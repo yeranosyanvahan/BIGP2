@@ -13,3 +13,6 @@ WHEN MATCHED AND (
         DST.ShipperID_NK = SRC.ShipperID,
         DST.CompanyName = SRC.CompanyName,
         DST.Phone = SRC.Phone;
+
+WHEN NOT MATCHED BY SOURCE THEN
+    DELETE;
