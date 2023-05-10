@@ -94,5 +94,25 @@ def update_dim_table(cursor, db_src, schema_src, table_src, db_dst, schema_dst, 
 
     print(f"The dimension table {table_dst} has been updated.")
     
-def update_fact_table(cursor, table_dst, db_dst, schema_dst, table_src, db_src, schema_src):
-    pass
+def update_fact_table(cursor, db_src, schema_src, table_src, db_dst, schema_dst, table_dst):
+    update_table_script = load_query('update_table_fact_{}'.format(table_dst)).format(
+        db_dim=db_dst, schema_dim=schema_dst, table_dim=table_dst,
+        db_rel=db_src, schema_rel=schema_src, table_rel=table_src)
+    
+    # Execute the query
+    cursor.execute(update_table_script)
+    cursor.commit()
+
+    print(f"The fact table {table_dst} has been updated.")    
+
+def create_table_fact(cursor, db, schema, facttablename):
+    create_table_script = load_query('create_table_fact_{}'.format(facttablename)).format(db=db, schema=schema, table=facttablename)
+    cursor.execute(create_table_script)
+    cursor.commit()
+    print("The {schema}.{table_name} table from the database {db} has been created".format(db=db, schema=schema, table_name=facttablename))
+
+def drop_fact_table(cursor, db, schema, facttablename):
+    drop_table_script = load_query('drop_table').format(db=db, schema=schema, table=facttablename)
+    cursor.execute(drop_table_script)
+    cursor.commit()
+    print("The {schema}.{table_name} fact table from database {db} has been dropped".format(db=db, schema=schema, table_name=facttablename))

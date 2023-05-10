@@ -43,10 +43,17 @@ class FLOW:
         tasks.create_database(conn)
 
     def create_table_fact(self,conn):
-        pass
+        facttablename = self.config.fact_table_name
+        tasks.create_table_fact(conn, 'Orders_DIMENSIONAL_DW', 'dbo', facttablename) 
 
     def update_fact_table(self,conn):
-        pass
+        facttablename = self.config.fact_table_name
+        tasks.update_fact_table(conn, 'Orders_RELATIONAL_DB', 'dbo', facttablename,
+                                      'Orders_DIMENSIONAL_DW', 'dbo', facttablename)
+
+    def drop_fact_table(self,conn):
+        facttablename = self.config.fact_table_name
+        tasks.drop_fact_table(conn, 'Orders_DIMENSIONAL_DW', 'dbo', facttablename)
 
     def execute(self):
         conn_master = FLOW.create_connection("master") 
@@ -64,9 +71,12 @@ class FLOW:
         conn_Rel.close()
 
         conn_Dim = FLOW.create_connection("DIMENTIONAL") 
+        self.drop_fact_table(conn_Dim)
+
         self.drop_tables_dim(conn_Dim)
         self.create_tables_dim(conn_Dim)
         self.update_dim_table(conn_Dim)
+
         self.create_table_fact(conn_Dim)
         self.update_fact_table(conn_Dim)
         conn_Dim.close()        
