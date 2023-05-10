@@ -1,6 +1,5 @@
 
 config.py
-sql_server_config.cfg
 
 #vscode
 .vscode
