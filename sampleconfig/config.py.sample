@@ -11,4 +11,5 @@ relational_input_dir = f'{abspath}\\BIGP2\\queries\\relational'
 relational_table_list = ["Categories", "Suppliers", "Customers", "Employees", "Products", "Region", "Shippers", "Territories", "Orders", "OrderDetails"]
 
 dimentional_input_dir = f'{abspath}\\BIGP2\\queries\\dimentional'
-dimentional_table_list = ["DimCategories", "DimSuppliers", "DimCustomers", "DimEmployees", "DimProducts", "DimRegion", "DimShippers", "DimTerritories", "FactOrders"]
+dimentional_table_list = ["DimCategories_SCD1", "DimSuppliers_SCD3", "DimCustomers_SCD2", "DimEmployees_SCD1", "DimProducts_SCD1", "DimRegion_SCD4", "DimShippers_SCD1", "DimTerritories_SCD4"]
+fact_table = "FactOrders"

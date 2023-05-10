@@ -11,6 +11,7 @@ CREATE TABLE {db}.{schema}.DimSuppliers_SCD3(
 	Country varchar(15) NULL,
 	Phone varchar(24) NULL,
 	Phone_Prev varchar(24) NULL,
+	Creation_Date int NULL,
 	Change_Date int NULL,
 	Fax varchar(24) NULL,
 	HomePage varchar(500) NULL

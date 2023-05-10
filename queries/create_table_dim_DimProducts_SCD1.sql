@@ -1,4 +1,4 @@
-CREATE TABLE {db}.{schema}.DimProducts_SCD2(
+CREATE TABLE {db}.{schema}.DimProducts_SCD1(
 	ProductID_PK_SK int PRIMARY KEY IDENTITY(1,1),
 	ProductID_NK int,
 	ProductName varchar(40) NOT NULL,
@@ -10,6 +10,6 @@ CREATE TABLE {db}.{schema}.DimProducts_SCD2(
 	UnitsOnOrder smallint NULL,
 	ReorderLevel smallint NULL,
 	Discontinued bit NOT NULL,
-	FOREIGN KEY(CategoryID) references DimCategories_SCD1(CategoryID_PK_SK),
-	FOREIGN KEY(SupplierID) references DimSuppliers_SCD3(SupplierID_PK_SK)
+	FOREIGN KEY(CategoryID_FK_SK) references DimCategories_SCD1(CategoryID_PK_SK),
+	FOREIGN KEY(SupplierID_FK_SK) references DimSuppliers_SCD3(SupplierID_PK_SK)
 );

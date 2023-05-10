@@ -61,7 +61,6 @@ def insert_into_table(cursor, table_name, db, schema, source_data):
 
 
 def update_dim_table(cursor, db_src, schema_src, table_src, db_dst, schema_dst, table_dst):
-
     update_table_script = load_query('update_table_dim_{}'.format(table_dst)).format(
         db_dim=db_dst, schema_dim=schema_dst, table_dim=table_dst,
         db_rel=db_src, schema_rel=schema_src, table_rel=table_src)

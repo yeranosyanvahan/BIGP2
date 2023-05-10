@@ -34,9 +34,15 @@ class FLOW:
             tasks.create_table_dim(conn, tablename, 'Orders_DIMENSIONAL_DW', 'dbo')  
 
     def update_dim_table(self, conn):
-        for reltablename, dimtablename in zip(self.config.relational_table_list_tmp, self.config.dimentional_table_list):
+        for reltablename, dimtablename in zip(self.config.relational_table_list, self.config.dimentional_table_list):
             tasks.update_dim_table(conn, 'Orders_RELATIONAL_DB', 'dbo', reltablename,
                                          'Orders_DIMENSIONAL_DW', 'dbo', dimtablename)    
+
+    def create_table_fact(self,conn):
+        pass
+
+    def update_fact_table(self,conn):
+        pass
 
     def execute(self):
         conn_Rel = FLOW.create_connection("RELATIONAL") 
@@ -49,5 +55,6 @@ class FLOW:
         self.drop_tables_dim(conn_Dim)
         self.create_tables_dim(conn_Dim)
         self.update_dim_table(conn_Dim)
-#        self.insert_into_fact(conn_Dim)
+        self.create_table_fact(conn_Dim)
+        self.update_fact_table(conn_Dim)
         conn_Dim.close()        
